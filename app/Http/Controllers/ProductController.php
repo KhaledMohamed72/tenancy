@@ -8,7 +8,6 @@ use Illuminate\Http\Request;
 class ProductController extends Controller
 {
     public function index(){
-        $store = app()->make('store.active');
-        return $store->products;
+        return Product::all();
     }
 }
